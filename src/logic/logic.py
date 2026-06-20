@@ -1,4 +1,6 @@
 class Calculator:
+    """Podstawowa klasa kalkulatora."""
+
     def add(self, a: float, b: float) -> float:
         return a + b
 
