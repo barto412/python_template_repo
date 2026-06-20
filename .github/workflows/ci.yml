@@ -1,0 +1,31 @@
+name: Python CI
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: bash scripts/create_venv.sh
+
+      - name: Format check
+        run: bash scripts/format_check.sh
+
+      - name: Lint
+        run: bash scripts/lint.sh
+
+      - name: Test
+        run: bash scripts/test.sh
