@@ -1,7 +1,6 @@
 import pytest
 from src.logic.logic import Calculator
 
-
 calc = Calculator()
 
 
