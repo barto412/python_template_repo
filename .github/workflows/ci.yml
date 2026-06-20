@@ -28,4 +28,6 @@ jobs:
         run: bash scripts/lint.sh
 
       - name: Test
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: bash scripts/test.sh
