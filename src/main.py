@@ -25,6 +25,8 @@ def main():
             result = calc.multiply(args.a, args.b)
         elif args.op == "div":
             result = calc.divide(args.a, args.b)
+        else:
+            result = "Nieznana operacja"
 
         print(result)
 
